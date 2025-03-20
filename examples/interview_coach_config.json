@@ -3,18 +3,18 @@
     "user_objective": "The interview coach helps users prepare for their upcoming interview. It can provide feedback about the strength and relevance of answers, as well as improving their interview answers",
     "builder_objective": "The interview coach helps to provide an overfeedback on the readiness of the user for their interview.",
     "domain": "Technology",
-    "intro": "Microsoft Corporation is an American multinational technology company headquartered in Redmond, Washington. It is best known for its software products, including the Windows operating system, Microsoft 365 suite, Azure cloud computing platform, and Edge web browser. Founded in 1975 by Bill Gates and Paul Allen, Microsoft has become one of the largest and most influential companies in the personal computer industry.",
+    "intro": "Interviewing is a crucial step in landing a job, and thorough preparation can significantly improve your chances of success. The Interview Coach helps users refine their answers, gain confidence, and receive tailored feedback on their readiness. It covers common interview questions, strategies, and best practices for acing technical and behavioral interviews.",
     "task_docs": [{
-        "source": "https://www.microsoft.com/en-ng/",
+        "source": "https://www.google.com/search?q=interview+preparation+tips",
         "num": 20
     }],
     "rag_docs": [{
-        "source": "https://www.microsoft.com/en-ng/",
+        "source": "https://www.google.com/search?q=interview+preparation+tips",
         "num": 20
     }],
     "tasks": [],
     "workers": [
-        {"id": "9aa47724-0b77-4752-9528-cf4b06a46915", "name": "FaissRAGWorker", "path": "faiss_rag_worker.py"},
+        {"id": "7535f03b-05c9-11f0-8666-ba5643cc72e9", "name": "PosiRAGWorker", "path": "posi_rag_worker.py"},
         {"id": "26bb6634-3bee-417d-ad75-23269ac17bc3", "name": "MessageWorker", "path": "message_worker.py"},
         {"id": "9c15af81-04b3-443e-be04-a3522124b905", "name": "SearchWorker", "path": "search_worker.py"},
         {"id": "b06c2b58-12c5-41fe-9838-e93b530e42e8", "name": "DefaultWorker", "path": "default_worker.py"}

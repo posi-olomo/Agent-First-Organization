@@ -30,6 +30,8 @@ class SearchEngine():
     def process_search_result(self, search_results):
         search_text = ""
         for res in search_results:
+            if not isinstance(res, dict):
+                print("Unexpected data format:", res)
             search_text += f"Source: {res['url']} \n"
             search_text += f"Content: {res['content']} \n\n"
         return search_text
@@ -43,5 +45,6 @@ class SearchEngine():
         ret_input = ret_input_chain.invoke({"chat_history": state["user_message"].history})
         logger.info(f"Reformulated input for search engine: {ret_input}")
         search_results = self.search_tool.invoke({"query": ret_input})
+        # print("Search results:", search_results) debugging
         state["message_flow"] = self.process_search_result(search_results)
         return state

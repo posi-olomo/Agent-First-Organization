@@ -117,4 +117,5 @@ if __name__ == "__main__":
     start_apis()
 
     #run server
-    uvicorn.run(app, host="0.0.0.0", port=args.port)
+    # uvicorn.run(app, host="0.0.0.0", port=args.port)
+    uvicorn.run(app, host="127.0.0.1", port=args.port)
