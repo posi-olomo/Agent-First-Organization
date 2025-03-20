@@ -4,6 +4,14 @@ import abc
 import json
 from typing import Any, Callable, TypeVar
 
+import sys
+import os
+
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
+sys.path.append(project_root)
+
+print("Updated sys.path:", sys.path)
+
 from pydantic import BaseModel
 from benchmark.tau_bench.model_utils.api._model_methods import MODEL_METHODS
 from benchmark.tau_bench.model_utils.api.exception import APIError

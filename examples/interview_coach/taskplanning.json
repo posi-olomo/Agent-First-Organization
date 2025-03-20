@@ -1,0 +1,65 @@
+[
+    {
+        "task_name": "Provide feedback on the strength and relevance of interview answers",
+        "steps": [
+            "Request the user to provide their interview answer for evaluation.",
+            "Use the DefaultWorker to analyze the user's answer and assess its strengths and weaknesses.",
+            "Provide feedback to the user on the identified strengths and relevance of their answer using the MessageWorker.",
+            "Ask the user if they would like suggestions to improve their answer or if they have any specific areas they want to focus on.",
+            "Offer additional advice or resources for improvement based on the user's response, and confirm if they need further assistance."
+        ]
+    },
+    {
+        "task_name": "Offer practice sessions with common interview questions",
+        "steps": [
+            "Introduce the practice session and ask the user if they have a specific type of interview or role in mind.",
+            "Based on the user's response, use the MessageWorker to present a set of common interview questions relevant to the specified role or type.",
+            "Ask the user to provide their answer to the first question.",
+            "Use the DefaultWorker to analyze the user's answer and provide feedback on its strengths and areas for improvement.",
+            "Ask the user if they would like to try answering another question or if they need feedback on a different response.",
+            "Repeat the process of providing questions and feedback until the user is satisfied or ready to end the session."
+        ]
+    },
+    {
+        "task_name": "Provide guidance on interview etiquette and best practices",
+        "steps": [
+            "Initiate the conversation by asking the user if they have any specific questions about interview etiquette or best practices.",
+            "Use the FaissRAGWorker to provide information on general interview etiquette and best practices from the company's internal documentation.",
+            "Ask the user if they have any specific scenarios or concerns related to interview etiquette that they would like advice on.",
+            "Utilize the MessageWorker to deliver tailored advice or guidelines based on the user's specific concerns or scenarios.",
+            "Confirm if the user has any further questions or needs additional guidance on interview preparation."
+        ]
+    },
+    {
+        "task_name": "Deliver personalized tips based on user's industry or role",
+        "steps": [
+            "Ask the user about their industry or role to gather context for personalized tips.",
+            "Retrieve information and tips specific to the user's industry or role from the company's internal documentation.",
+            "Deliver personalized tips and advice to the user based on the retrieved information.",
+            "Ask the user if they need more specific tips or have any additional questions about their interview preparation.",
+            "If the user requests more information, conduct a real-time search for additional tips or advice.",
+            "Provide the additional information found through the search and ask if further assistance is needed."
+        ]
+    },
+    {
+        "task_name": "Help align resume content with typical interview questions",
+        "steps": [
+            "Ask the user to upload their resume to start the alignment process.",
+            "Inquire about the specific job position or industry the user is targeting for the interview.",
+            "Use FaissRAGWorker to retrieve typical interview questions relevant to the specified job position or industry.",
+            "Analyze the user's resume content and identify key skills and experiences that align with the retrieved interview questions.",
+            "Provide feedback to the user on how well their resume content aligns with the typical interview questions and suggest improvements if needed.",
+            "Ask the user if they want to practice answering any specific interview questions and offer to help refine their responses."
+        ]
+    },
+    {
+        "task_name": "Offer techniques and exercises to manage interview anxiety",
+        "steps": [
+            "Inquire about the user's specific concerns related to interview anxiety using the MessageWorker.",
+            "Provide personalized techniques and exercises to manage anxiety using the MessageWorker.",
+            "Ask if the user would like additional strategies or has any specific requests using the MessageWorker.",
+            "Confirm if the user feels more prepared or needs further assistance using the MessageWorker.",
+            "Encourage the user to practice the techniques and offer a follow-up option for additional support using the MessageWorker."
+        ]
+    }
+]

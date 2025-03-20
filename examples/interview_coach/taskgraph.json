@@ -1,0 +1,989 @@
+{
+    "nodes": [
+        [
+            "0",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Hello and welcome to your Interview Coach! I'm here to help you prepare for your upcoming interview by providing feedback and tips to enhance your answers. What would you like to work on today?",
+                    "task": "start message",
+                    "directed": false
+                },
+                "limit": 1,
+                "type": "start"
+            }
+        ],
+        [
+            "1",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Please provide your interview answer for evaluation.",
+                    "task": "Request the user to provide their interview answer for evaluation.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "2",
+            {
+                "resource": {
+                    "id": "default_worker",
+                    "name": "DefaultWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the DefaultWorker to analyze the user's answer and assess its strengths and weaknesses.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "3",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here are some strengths of your answer: [Strengths]. It is relevant because [Relevance].",
+                    "task": "Provide feedback to the user on the identified strengths and relevance of their answer using the MessageWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "4",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Would you like suggestions to improve your answer, or is there a specific area you want to focus on?",
+                    "task": "Ask the user if they would like suggestions to improve their answer or if they have any specific areas they want to focus on.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "5",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Based on your response, here is some advice: [Advice]. Do you need any further assistance?",
+                    "task": "Offer additional advice or resources for improvement based on the user's response, and confirm if they need further assistance.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "6",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Welcome to the practice session! Do you have a specific type of interview or role in mind that you would like to prepare for?",
+                    "task": "Introduce the practice session and ask the user if they have a specific type of interview or role in mind.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "7",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here are some common interview questions for the role of Software Engineer. Let's start with the first question.",
+                    "task": "Based on the user's response, use the MessageWorker to present a set of common interview questions relevant to the specified role or type.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "8",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Could you please provide your answer to the first question?",
+                    "task": "Ask the user to provide their answer to the first question.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "9",
+            {
+                "resource": {
+                    "id": "default_worker",
+                    "name": "DefaultWorker"
+                },
+                "attribute": {
+                    "value": "Your answer highlights your technical skills well, but you might want to include more examples of teamwork. Here's some feedback on how you can improve.",
+                    "task": "Use the DefaultWorker to analyze the user's answer and provide feedback on its strengths and areas for improvement.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "10",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Would you like to try another question, or do you need feedback on a different response?",
+                    "task": "Ask the user if they would like to try answering another question or if they need feedback on a different response.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "11",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Let's continue with the next question. Let me know when you're ready to end the session.",
+                    "task": "Repeat the process of providing questions and feedback until the user is satisfied or ready to end the session.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "12",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you have any specific questions about interview etiquette or best practices that I can help with?",
+                    "task": "Initiate the conversation by asking the user if they have any specific questions about interview etiquette or best practices.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "13",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the FaissRAGWorker to provide information on general interview etiquette and best practices from the company's internal documentation.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "14",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Are there any specific scenarios or concerns related to interview etiquette that you would like advice on?",
+                    "task": "Ask the user if they have any specific scenarios or concerns related to interview etiquette that they would like advice on.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "15",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Based on your scenario, here is some advice that might help...",
+                    "task": "Utilize the MessageWorker to deliver tailored advice or guidelines based on the user's specific concerns or scenarios.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "16",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you have any further questions or need additional guidance on interview preparation?",
+                    "task": "Confirm if the user has any further questions or needs additional guidance on interview preparation.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "17",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Can you tell me about your industry or role so I can provide personalized tips?",
+                    "task": "Ask the user about their industry or role to gather context for personalized tips.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "18",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Retrieve information and tips specific to the user's industry or role from the company's internal documentation.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "19",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Based on your industry, here are some tips that might help you in your interview preparation.",
+                    "task": "Deliver personalized tips and advice to the user based on the retrieved information.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "20",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need more specific tips or have any additional questions about your interview preparation?",
+                    "task": "Ask the user if they need more specific tips or have any additional questions about their interview preparation.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "21",
+            {
+                "resource": {
+                    "id": "9c15af81-04b3-443e-be04-a3522124b905",
+                    "name": "SearchWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "If the user requests more information, conduct a real-time search for additional tips or advice.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "22",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here is some additional information I found. Do you need further assistance?",
+                    "task": "Provide the additional information found through the search and ask if further assistance is needed.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "23",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Please upload your resume to start the alignment process.",
+                    "task": "Ask the user to upload their resume to start the alignment process.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "24",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "What job position or industry are you targeting for your interview?",
+                    "task": "Inquire about the specific job position or industry the user is targeting for the interview.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "25",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use FaissRAGWorker to retrieve typical interview questions relevant to the specified job position or industry.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "26",
+            {
+                "resource": {
+                    "id": "default_worker",
+                    "name": "DefaultWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Analyze the user's resume content and identify key skills and experiences that align with the retrieved interview questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "27",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Based on your resume, here are some suggestions to improve alignment with typical interview questions.",
+                    "task": "Provide feedback to the user on how well their resume content aligns with the typical interview questions and suggest improvements if needed.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "28",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Would you like to practice answering any specific interview questions? I can help you refine your responses.",
+                    "task": "Ask the user if they want to practice answering any specific interview questions and offer to help refine their responses.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "29",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Could you share with me what specific concerns you have about interview anxiety?",
+                    "task": "Inquire about the user's specific concerns related to interview anxiety using the MessageWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "30",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here are some personalized techniques to help manage your interview anxiety: deep breathing exercises, visualization techniques, and positive affirmations.",
+                    "task": "Provide personalized techniques and exercises to manage anxiety using the MessageWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "31",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Would you like to learn more strategies, or do you have any specific requests?",
+                    "task": "Ask if the user would like additional strategies or has any specific requests using the MessageWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "32",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you feel more prepared now, or would you like further assistance?",
+                    "task": "Confirm if the user feels more prepared or needs further assistance using the MessageWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "33",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "I encourage you to practice these techniques regularly, and feel free to reach out if you need additional support.",
+                    "task": "Encourage the user to practice the techniques and offer a follow-up option for additional support using the MessageWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ]
+    ],
+    "edges": [
+        [
+            "0",
+            "1",
+            {
+                "intent": "User wants to improve interview answers",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "1",
+            "2",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "2",
+            "3",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "3",
+            "4",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "4",
+            "5",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "6",
+            {
+                "intent": "User wants to practice common interview questions",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "6",
+            "7",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "7",
+            "8",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "8",
+            "9",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "9",
+            "10",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "10",
+            "11",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "12",
+            {
+                "intent": "User seeks advice on interview etiquette",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "12",
+            "13",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "13",
+            "14",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "14",
+            "15",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "15",
+            "16",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "17",
+            {
+                "intent": "User requests personalized interview tips",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "17",
+            "18",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "18",
+            "19",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "19",
+            "20",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "20",
+            "21",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "21",
+            "22",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "23",
+            {
+                "intent": "User needs assistance with resume alignment",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "23",
+            "24",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "24",
+            "25",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "25",
+            "26",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "26",
+            "27",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "27",
+            "28",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "29",
+            {
+                "intent": "User wants to manage interview anxiety",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "29",
+            "30",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "30",
+            "31",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "31",
+            "32",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "32",
+            "33",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ]
+    ],
+    "role": "Interview Coach",
+    "user_objective": "The interview coach helps users prepare for their upcoming interview. It can provide feedback about the strength and relevance of answers, as well as improving their interview answers",
+    "builder_objective": "The interview coach helps to provide an overfeedback on the readiness of the user for their interview.",
+    "domain": "Technology",
+    "intro": "Microsoft Corporation is an American multinational technology company headquartered in Redmond, Washington. It is best known for its software products, including the Windows operating system, Microsoft 365 suite, Azure cloud computing platform, and Edge web browser. Founded in 1975 by Bill Gates and Paul Allen, Microsoft has become one of the largest and most influential companies in the personal computer industry.",
+    "task_docs": [
+        {
+            "source": "https://www.microsoft.com/en-ng/",
+            "num": 20
+        }
+    ],
+    "rag_docs": [
+        {
+            "source": "https://www.microsoft.com/en-ng/",
+            "num": 20
+        }
+    ],
+    "tasks": [],
+    "workers": [
+        {
+            "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+            "name": "FaissRAGWorker",
+            "path": "faiss_rag_worker.py"
+        },
+        {
+            "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+            "name": "MessageWorker",
+            "path": "message_worker.py"
+        },
+        {
+            "id": "9c15af81-04b3-443e-be04-a3522124b905",
+            "name": "SearchWorker",
+            "path": "search_worker.py"
+        },
+        {
+            "id": "b06c2b58-12c5-41fe-9838-e93b530e42e8",
+            "name": "DefaultWorker",
+            "path": "default_worker.py"
+        }
+    ],
+    "tools": [],
+    "nluapi": "",
+    "slotfillapi": ""
+}

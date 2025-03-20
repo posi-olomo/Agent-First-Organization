@@ -41,9 +41,22 @@ CAPABILITY_SCORE_MAP = {
 CAPABILITY_SCORE_FALLBACK = 0.3
 
 # TODO: implement
-LATENCY_MS_PER_OUTPUT_TOKEN_MAP = {}
+LATENCY_MS_PER_OUTPUT_TOKEN_MAP = {
+    "gpt-4o-2024-08-06": 0.8,
+    "gpt-4o": 0.8,
+    "gpt-4o-2024-08-06": 0.8,
+    "gpt-4o-2024-05-13": 0.8,
+    "gpt-4-turbo": 0.9,
+    "gpt-4-turbo-2024-04-09": 0.9,
+    "gpt-4": 0.8,
+    "gpt-4o-mini": 0.5,
+    "gpt-4o-mini-2024-07-18": 0.5,
+    "gpt-3.5-turbo": 0.3,
+    "gpt-3.5-turbo-0125": 0.3,
+}
+
 # TODO: implement
-LATENCY_MS_PER_OUTPUT_TOKEN_FALLBACK = 0.0
+LATENCY_MS_PER_OUTPUT_TOKEN_FALLBACK = 1.0
 
 MAX_CONTEXT_LENGTH_MAP = {
     "gpt-4o-2024-08-06": 128000,
