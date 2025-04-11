@@ -5,6 +5,7 @@ from typing import List
 import requests
 import pickle
 import uuid
+from selenium.webdriver.chrome.service import Service ##
 import argparse
 import os
 
@@ -72,9 +73,19 @@ class Loader:
         options.add_argument("--disable-infobars")
         options.add_argument("--remote-debugging-pipe")
         chrome_driver_path = Path(ChromeDriverManager(driver_version=CHROME_DRIVER_VERSION).install())
-        options.binary_location = str(chrome_driver_path.parent.absolute())
-        logger.info(f"chrome binary location: {options.binary_location}")
-        driver = webdriver.Chrome(options=options)
+        chrome_binary_path = Path(r"C:\Program Files\Google\Chrome\Application\Chrome") ##
+        options.binary_location = str(chrome_binary_path) 
+
+        # Logging
+        logger.info(f"Chrome binary location: {options.binary_location}") ##
+        logger.info(f"ChromeDriver path: {chrome_driver_path}") ##
+
+        service = Service(chrome_driver_path) ##
+        # Create the WebDriver 
+        driver = webdriver.Chrome(service=service) ##
+        # options.binary_location = str(chrome_driver_path.parent.absolute())
+        # logger.info(f"chrome binary location: {options.binary_location}")
+        # driver = webdriver.Chrome(options=options)
 
         docs: List[CrawledURLObject] = []
         for url_obj in url_objects:

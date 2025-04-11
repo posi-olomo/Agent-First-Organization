@@ -90,7 +90,7 @@ def build_database(candidate_id: str, applied_role: str, question_text: str, res
         return f"Error: {e}"
     
     return "Success"
-"""
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--folder_path", required=True, type=str, help="location to save the documents")
@@ -100,4 +100,3 @@ if __name__ == "__main__":
         os.makedirs(args.folder_path)
 
     build_database(args.folder_path)
-"""

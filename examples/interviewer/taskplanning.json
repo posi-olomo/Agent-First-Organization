@@ -1,60 +1,73 @@
 [
     {
-        "task_name": "Welcome the candidate and ask for their email to identify them and then the role they applied for.",
+        "task_name": "Welcome the candidate and ask for their email to identify them and then the role they applied for. DO THIS ONLY ONCE.",
         "steps": [
-            "Use the MessageWorker to welcome the candidate to the interview and ask for their email address for identification.",
-            "Use the RoleQuestionWorker to inquire about the specific role the candidate has applied for."
+            "Welcome the candidate and ask for their email to identify them and then the role they applied for. DO THIS ONLY ONCE."
         ]
     },
     {
         "task_name": "Then, ask the candidate 2 personal questions from the internal database. DO NOT CREATE YOUR OWN QUESTION.",
         "steps": [
-            "Utilize RoleQuestionWorker to access the database and retrieve 2 personal questions relevant to the candidate's intended role.",
-            "Use MessageWorker to ask the candidate the first personal question from the retrieved list.",
-            "Once the candidate responds, employ AnswerScorerWorker to evaluate the response based on accuracy, clarity, relevance, structure, and completeness. Provide feedback if necessary.",
-            "Use MessageWorker to ask the candidate the second personal question from the retrieved list.",
-            "After receiving the candidate's response, employ AnswerScorerWorker again to score the second answer and provide feedback if necessary."
+            "Then, ask the candidate 2 personal questions from the internal database. DO NOT CREATE YOUR OWN QUESTION."
         ]
     },
     {
         "task_name": "After completing the task above, store the candidate's id, role applied, question asked, their response and their score in an sqlite database.",
         "steps": [
-            "Store the candidate's ID (email), role applied for, question asked, their response, and their score in an SQLite database."
+            "Start by using the MessageWorker to greet the candidate and ask for their email and the role they are applying for.",
+            "Utilize the RoleQuestionWorker to access role-based interview questions using the candidate's provided role information.",
+            "Use the MessageWorker to present the first interview question to the candidate and await their response.",
+            "Once the candidate responds, leverage the AnswerScorerWorker to evaluate the response based on accuracy, clarity, relevance, structure, and completeness.",
+            "Store the candidate's ID, role applied, the question asked, their response, and the score in the SQLite database.",
+            "Use the MessageWorker to ask if the candidate is ready for another question, or if they need a break.",
+            "Repeat steps 3 to 6 for the remaining questions, ensuring each response is stored and scored appropriately.",
+            "After all questions are completed, use the MessageWorker to thank the candidate for their time and inform them about the next steps in the interview process."
         ]
     },
     {
         "task_name": "Then, Ask the candidate 3 behavioural questions from the internal database. DO NOT CREATE YOUR OWN QUESTION.",
         "steps": [
-            "Use RoleQuestionWorker with the candidate's email and role to retrieve a set of 3 behavioural questions from the internal database.",
-            "Use MessageWorker to ask the first behavioural question to the candidate and wait for their response.",
-            "Use AnswerScorerWorker to score the candidate\u2019s response to the first question based on accuracy, clarity, relevance, structure, and completeness.",
-            "Use MessageWorker to ask the second behavioural question to the candidate and wait for their response.",
-            "Use AnswerScorerWorker to score the candidate\u2019s response to the second question based on accuracy, clarity, relevance, structure, and completeness.",
-            "Use MessageWorker to ask the third behavioural question to the candidate and wait for their response.",
-            "Use AnswerScorerWorker to score the candidate\u2019s response to the third question based on accuracy, clarity, relevance, structure, and completeness."
+            "Use the MessageWorker to greet the candidate and ask for their email address and the role they are applying for.",
+            "Use the RoleQuestionWorker to retrieve and ask the first behavioural question based on the candidate's role.",
+            "After the candidate responds, use the AnswerScorerWorker to score the candidate's answer based on its accuracy, clarity, relevance, structure, and completeness.",
+            "Use the RoleQuestionWorker to retrieve and ask the second behavioural question based on the candidate's role.",
+            "After the candidate responds, use the AnswerScorerWorker to score the candidate's answer based on its accuracy, clarity, relevance, structure, and completeness.",
+            "Use the RoleQuestionWorker to retrieve and ask the third behavioural question based on the candidate's role.",
+            "After the candidate responds, use the AnswerScorerWorker to score the candidate's answer based on its accuracy, clarity, relevance, structure, and completeness.",
+            "Use the MessageWorker to thank the candidate for their time and inform them about the next steps in the interview process."
         ]
     },
     {
         "task_name": "After completing the task above store the candidate's id, role applied, question asked, their response and their score in an sqlite database.",
         "steps": [
-            "Store the candidate's ID, role applied for, question asked, their response, and score in an SQLite database."
+            "MessageWorker asks the candidate for their email and the role they are applying for.",
+            "RoleQuestionWorker uses the provided email and role to ask a role-based interview question.",
+            "MessageWorker delivers the role-based question to the candidate.",
+            "Wait for the candidate's response to the question.",
+            "AnswerScorerWorker scores the candidate's response based on accuracy, clarity, relevance, structure, and completeness.",
+            "Store the candidate's information (email as ID), role applied, question asked, their response, and their score in an sqlite database.",
+            "MessageWorker asks if the candidate would like to answer another question."
         ]
     },
     {
         "task_name": "Then, ask the candidate 6 technical questions based on the role they applied for. The questions should be taken from the internal database. DO NOT CREATE YOUR OWN QUESTION.",
         "steps": [
-            "Use RoleQuestionWorker to retrieve 6 technical questions based on the provided role information.",
-            "Use MessageWorker to deliver the first technical question to the candidate.",
-            "Once the candidate responds, use AnswerScorerWorker to assess the candidate's answer based on given criteria.",
-            "Repeat steps 3 and 4 for each of the remaining technical questions.",
-            "Use MessageWorker to thank the candidate for their responses and inform them about the next steps in the interview process."
+            "Use MessageWorker to greet the candidate and request their email and the role they applied for.",
+            "Use RoleQuestionWorker with the candidate's email and role to retrieve 6 technical questions from the internal database.",
+            "Use MessageWorker to present the first technical question to the candidate.",
+            "After the candidate responds, use AnswerScorerWorker to evaluate the candidate's answer based on accuracy, clarity, relevance, structure, and completeness. Provide feedback through MessageWorker.",
+            "Repeat steps 3 and 4 for the remaining 5 technical questions, using MessageWorker to present questions and AnswerScorerWorker for scoring responses.",
+            "Conclude the interview by thanking the candidate for their time and informing them of the next steps in the interview process using MessageWorker."
         ]
     },
     {
         "task_name": "After completing the task above store the candidate's id, role applied, question asked, their response and their score in an sqlite database.",
         "steps": [
-            "Store the candidate's email, role applied for, question asked, response, and score in an sqlite database.",
-            "Use MessageWorker to ask the candidate if they would like to answer another question or end the interview process."
+            "Ask the candidate for their email and the role they are applying for using the RoleQuestionWorker.",
+            "Use RoleQuestionWorker to ask a role-based interview question to the candidate.",
+            "Receive the candidate's response via the MessageWorker.",
+            "Use AnswerScorerWorker to evaluate the response based on accuracy, clarity, relevance, structure, and completeness.",
+            "Store the candidate's information including their email, role applied, question asked, response, and score in the SQLite database."
         ]
     },
     {

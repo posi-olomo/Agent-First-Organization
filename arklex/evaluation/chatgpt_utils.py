@@ -103,6 +103,7 @@ def generate_goal(doc_content):
 def generate_goals(documents, params):
     goals = []
     for i in range(params['num_goals']):
+        print(f"Documents list: {documents}")
         doc = random.choice(documents)
         goals.append(generate_goal(doc['content']))
     return goals

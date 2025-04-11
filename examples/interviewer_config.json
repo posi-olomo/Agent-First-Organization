@@ -5,7 +5,11 @@
     "domain": "Human Resources (HR)",
     "intro": "Recruiting is a tedius process and several candidates apply for several roles. The Interview, helps companies by removing the burden of interviewing several candidates by automating the process, ensuring that HR personell can focus their energy on other aspects of the recruitment process. It assesses the candidate's personality, skills, qualifications and fit for the role.",
     "task_docs": [{
-        "source": "",
+        "source": "https://en.wikipedia.org/wiki/Natural_language_processing",
+        "num": 20
+    }],
+    "rag_docs": [{
+        "source": "https://en.wikipedia.org/wiki/Natural_language_processing",
         "num": 20
     }],
     "tasks": [
@@ -26,6 +30,6 @@
         {"id": "b06c2b58-12c5-41fe-9838-e93b530e42e8", "name": "DefaultWorker", "path": "default_worker.py"}
     ],
     "tools": [
-        {"id": "55568f1d-160b-11f0-b786-e2b9fcc27dba", "name": "build_database", "path": "database\\build_database.py"}
+        {"id": "55568f1d-160b-11f0-b786-e2b9fcc27dba", "name": "build_database", "path": "database\build_database.py"}
     ]
 }
