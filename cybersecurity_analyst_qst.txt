@@ -1,0 +1,16 @@
+INSERT INTO question_bank (role, Category, question_text)
+VALUES
+    ('Cybersecurity Analyst', 'technical', 'What is the difference between symmetric and asymmetric encryption?'),
+    ('Cybersecurity Analyst', 'technical', 'How do you perform a vulnerability scan and interpret the results?'),
+    ('Cybersecurity Analyst', 'technical', 'What is the principle of least privilege, and how do you enforce it?'),
+    ('Cybersecurity Analyst', 'technical', 'What tools do you use for penetration testing?'),
+    ('Cybersecurity Analyst', 'technical', 'Describe a security incident you have investigated.'),
+    ('Cybersecurity Analyst', 'technical', 'Describe the OWASP Top 10.'),
+    ('Cybersecurity Analyst', 'technical', 'How would you secure a web application?'),
+    ('Cybersecurity Analyst', 'technical', 'What is the difference between IDS and IPS?'),
+    ('Cybersecurity Analyst', 'technical', 'How do you stay updated with security threats?'),
+    ('Cybersecurity Analyst', 'technical', 'What is the role of encryption in data protection?'),
+    ('Cybersecurity Analyst', 'technical', 'What is the principle of least privilege and why is it important?'),
+    ('Cybersecurity Analyst', 'technical', 'How do you respond to a ransomware attack?'),
+    ('Cybersecurity Analyst', 'technical', 'Explain what a zero-day vulnerability is.')
+;

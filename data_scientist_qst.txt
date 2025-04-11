@@ -1,0 +1,13 @@
+INSERT INTO question_bank (role, Category, question_text)
+VALUES
+    ('Data Scientist', 'technical', 'Explain how k-means clustering works.'),
+    ('Data Scientist', 'technical', 'How do you detect and handle multicollinearity?'),
+    ('Data Scientist', 'technical', 'What is regularization and why is it important?'),
+    ('Data Scientist', 'technical', 'What are assumptions of linear regression?'),
+    ('Data Scientist', 'technical', 'How do you interpret a confusion matrix?'),
+    ('Data Scientist', 'technical', 'Explain the difference between precision and recall.'),
+    ('Data Scientist', 'technical', 'How do you handle missing data in a dataset?'),
+    ('Data Scientist', 'technical', 'Describe your approach to A/B testing.'),
+    ('Data Scientist', 'technical', 'How do you select the right model for a prediction task?'),
+    ('Data Scientist', 'technical', 'What are common data visualization tools you use?')
+;

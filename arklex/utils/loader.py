@@ -25,7 +25,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-CHROME_DRIVER_VERSION = "125.0.6422.7"
+CHROME_DRIVER_VERSION = "135.0.7049.85"
 
 class URLObject:
     def __init__(self, id: str, url: str):

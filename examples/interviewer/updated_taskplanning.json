@@ -1,0 +1,84 @@
+[
+    {
+        "task_name": "Welcome the candidate and ask for their email to identify them and then the role they applied for.",
+        "steps": [
+            "Welcome the candidate and ask for their email to identify them and then the role they applied for."
+        ]
+    },
+    {
+        "task_name": "Ask the candidate 3 personal questions.",
+        "steps": [
+            "Ask the candidate 3 personal questions."
+        ]
+    },
+    {
+        "task_name": "Store the candidate's id, role applied, question asked, their response and their score  in an sqlite database.",
+        "steps": [
+            "Use the MessageWorker to ask the candidate for their email and the role they are applying for.",
+            "Use the RoleQuestionWorker to retrieve and ask the first set of role-based interview questions, starting with personal questions.",
+            "Use the MessageWorker to present the personal question to the candidate and record their response.",
+            "Use the AnswerReviewWorker to evaluate the candidate's response to the personal question and assign a score.",
+            "Store the candidate's ID (email), role, personal question, their response, and the score in the SQLite database.",
+            "Use the RoleQuestionWorker to retrieve and ask the next set of role-based interview questions, which are behavioural questions.",
+            "Use the MessageWorker to present the behavioural question to the candidate and record their response.",
+            "Use the AnswerReviewWorker to evaluate the candidate's response to the behavioural question and assign a score.",
+            "Store the candidate's ID (email), role, behavioural question, their response, and the score in the SQLite database.",
+            "Use the RoleQuestionWorker to retrieve and ask the final set of role-based interview questions, which are technical questions.",
+            "Use the MessageWorker to present the technical question to the candidate and record their response.",
+            "Use the AnswerReviewWorker to evaluate the candidate's response to the technical question and assign a score.",
+            "Store the candidate's ID (email), role, technical question, their response, and the score in the SQLite database.",
+            "Use the MessageWorker to inform the candidate that the interview process is complete and provide any next steps or closing remarks."
+        ]
+    },
+    {
+        "task_name": "Ask the candidate 3 behavioural questions.",
+        "steps": [
+            "Ask the candidate 3 behavioural questions."
+        ]
+    },
+    {
+        "task_name": "Store the candidate's id, role applied, question asked, their response and their score  in an sqlite database.",
+        "steps": [
+            "Use MessageWorker to greet the candidate and ask for their email and the role they are applying for.",
+            "Use RoleQuestionWorker to retrieve the candidate's email and role, and to start asking role-based personal questions.",
+            "Store the candidate's id (derived from email) and role in the SQLite database.",
+            "Continue using RoleQuestionWorker to ask behavioural questions, storing each question and response in the database.",
+            "Proceed to technical questions with RoleQuestionWorker, saving each question and response in the database.",
+            "Use AnswerReviewWorker to evaluate each response for personal, behavioural, and technical questions, and store the scores in the database.",
+            "Use MessageWorker to thank the candidate for their time and inform them that their responses have been recorded."
+        ]
+    },
+    {
+        "task_name": "Ask the candidate 6 technical questions based on the role they applied for.",
+        "steps": [
+            "Ask the candidate 6 technical questions based on the role they applied for."
+        ]
+    },
+    {
+        "task_name": "Store the candidate's id, role applied, question asked, their response and their score in an sqlite database.",
+        "steps": [
+            "Use the RoleQuestionWorker to ask the candidate for their email and the role they are applying for.",
+            "Based on the role provided, use the RoleQuestionWorker to start asking personal interview questions.",
+            "Use the AnswerReviewWorker to review the candidate's response to the personal questions and score them based on accuracy, clarity, relevance, structure, and completeness.",
+            "Store the candidate's ID, role applied, personal question asked, response, and score in the sqlite database.",
+            "Use the RoleQuestionWorker to proceed with asking the candidate behavioural interview questions.",
+            "Use the AnswerReviewWorker to review and score the candidate's responses to the behavioural questions.",
+            "Store the behavioural question, response, and score in the sqlite database.",
+            "Use the RoleQuestionWorker to proceed with asking the candidate technical interview questions.",
+            "Use the AnswerReviewWorker to review and score the candidate's responses to the technical questions.",
+            "Store the technical question, response, and score in the sqlite database."
+        ]
+    },
+    {
+        "task_name": "Thank the candiate for their time and let them know we will get back to them on the result of this interview.",
+        "steps": [
+            "Thank the candiate for their time and let them know we will get back to them on the result of this interview."
+        ]
+    },
+    {
+        "task_name": "End the conversation.",
+        "steps": [
+            "End the conversation."
+        ]
+    }
+]

@@ -1,0 +1,968 @@
+{
+    "nodes": [
+        [
+            "0",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Hello! I am your Interviewer Bot, here to guide you through the interview process. Let's get started with some questions to help us understand more about your skills, experiences, and qualifications. Ready when you are!",
+                    "task": "start message",
+                    "directed": false
+                },
+                "limit": 1,
+                "type": "start"
+            }
+        ],
+        [
+            "1",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Can you tell us about a personal achievement that you are particularly proud of?",
+                    "task": "Use RoleQuestionWorker to ask the candidate personal questions to assess their personality traits.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "2",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here's a personal question we'd like you to answer: Can you tell us about a personal achievement that you are particularly proud of?",
+                    "task": "Use MessageWorker to deliver the question to the candidate.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "3",
+            {
+                "resource": {
+                    "id": "b06c2b58-12c5-41fe-9838-e93b530e42e8",
+                    "name": "DefaultWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Receive and record the candidate's response using DefaultWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "4",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "Your answer was clear and well-structured. It highlighted the relevance of your achievements to the traits we're assessing.",
+                    "task": "Use AnswerReviewWorker to review the candidate's response, providing a measure on the clarity, relevance, structure, and completeness of their answer.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "5",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Thank you for your response. We will move on to the next question.",
+                    "task": "Use MessageWorker to deliver the message to the candidate.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "6",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Describe a time when you had to handle a difficult situation at work. What was your approach and what was the outcome?",
+                    "task": "Use RoleQuestionWorker to ask the candidate behavior-based questions to further assess their personality traits.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "7",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here's a behavior-based question for you: Describe a time when you had to handle a difficult situation at work. What was your approach and what was the outcome?",
+                    "task": "Use MessageWorker to deliver the behavior question to the candidate.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "8",
+            {
+                "resource": {
+                    "id": "b06c2b58-12c5-41fe-9838-e93b530e42e8",
+                    "name": "DefaultWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Receive and record the candidate's behavior-based response using DefaultWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "9",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "Your response effectively demonstrated problem-solving skills and resilience in challenging situations.",
+                    "task": "Use AnswerReviewWorker to review the behavior-based response, and save the review.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "10",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Thank you for sharing your experience.",
+                    "task": "Use MessageWorker to deliver the message to the candidate.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "11",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Could you tell me a little about your background and what motivates you in your career?",
+                    "task": "Use the RoleQuestionWorker to ask the candidate personal questions to understand their background and motivations. These questions set the context for the evaluation.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "12",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Can you provide an example of a time when you had to work under pressure and how you handled it?",
+                    "task": "Transition to behavior-based questions with the RoleQuestionWorker to assess how the candidate handles various situations and their interpersonal skills.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "13",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Could you walk us through your approach to solving a complex problem in your area of expertise?",
+                    "task": "Use the RoleQuestionWorker to ask technical questions specific to the role, evaluating the hard skills and problem-solving abilities of the candidate.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "14",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "Your answer was very detailed and structured well, which provided great insight into your problem-solving process.",
+                    "task": "Review the candidate's answers using the AnswerReviewWorker based on clarity, relevance, structure, and completeness.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "15",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "The candidate's responses have been scored and saved for future reference.",
+                    "task": "Score the candidate based on the strength and relevance of their answers. Save the responses and scores for future reference.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "16",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Thank you for your time today. We will review your responses and get back to you with the next steps in the interview process.",
+                    "task": "Use the MessageWorker to thank the candidate for their time and inform them of the next steps in the interview process.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "17",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Could you please tell me a little about your personal background?",
+                    "task": "Initiate the interview by prompting the candidate for their personal background using RoleQuestionWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "18",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Can you describe a time when you had to overcome a significant challenge at work?",
+                    "task": "Ask behavior-based questions tailored to the role using RoleQuestionWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "19",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "What experience do you have with managing technical projects or leading a technical team?",
+                    "task": "Proceed with technical questions relevant to the role using RoleQuestionWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "20",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use AnswerReviewWorker to review the candidate's responses for clarity, relevance, structure, and completeness.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "21",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Thank you for your responses. We will review them and get back to you with feedback soon.",
+                    "task": "Save the candidate's responses for record-keeping.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "22",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Can you tell me a little bit about yourself and what interests you about this role?",
+                    "task": "Use RoleQuestionWorker to ask the candidate personal background questions to assess their personality and initial role fit.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "23",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Could you share an experience where you overcame a significant challenge at work?",
+                    "task": "Use RoleQuestionWorker to ask behavior-based questions to evaluate the candidate's past experiences and behavior in work-related situations.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "24",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Can you explain how you would approach solving a technical problem related to this field?",
+                    "task": "Use RoleQuestionWorker to ask technical questions specifically related to the role to determine the candidate's technical competence.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "25",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "Your response was well-structured and relevant. However, adding a specific example could enhance its clarity.",
+                    "task": "Use AnswerReviewWorker to review each of the candidate's responses for clarity, relevance, structure, and completeness.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "26",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Thank you for your answers. We'll contact you shortly with the next steps.",
+                    "task": "Use MessageWorker to communicate the message to the candidate and inform them about the next steps in the interview process.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "27",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "Your answer demonstrated an excellent understanding of the technical concepts, but could benefit from more detailed examples.",
+                    "task": "Score responses",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "28",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Can you tell me about your background and what motivated you to apply for this position?",
+                    "task": "Start the interview by using the RoleQuestionWorker to ask personal questions to the candidate to understand their background and motivations.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "29",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Can you give me an example of a challenging situation you faced at work and how you dealt with it?",
+                    "task": "Continue the interview with behavioural questions using the RoleQuestionWorker to assess the candidate's past experiences and problem-solving abilities.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "30",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Can you explain a project where you applied the key technologies required for this role?",
+                    "task": "Proceed with technical questions using the RoleQuestionWorker, focusing on evaluating the candidate's technical skills relevant to the role.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "31",
+            {
+                "resource": {
+                    "id": "b06c2b58-12c5-41fe-9838-e93b530e42e8",
+                    "name": "DefaultWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Record the candidate's responses after each question using the DefaultWorker, ensuring all responses are documented accurately.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "32",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "The response was clear and relevant, however, improving the structure could enhance the delivery.",
+                    "task": "Review the candidate's responses using the AnswerReviewWorker based on the clarity, relevance, structure, and completeness of their answers.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ]
+    ],
+    "edges": [
+        [
+            "0",
+            "1",
+            {
+                "intent": "User wants to assess candidate's personality",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "1",
+            "2",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "2",
+            "3",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "3",
+            "4",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "4",
+            "5",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "5",
+            "6",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "6",
+            "7",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "7",
+            "8",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "8",
+            "9",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "9",
+            "10",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "11",
+            {
+                "intent": "User wants to evaluate candidate's skills",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "11",
+            "12",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "12",
+            "13",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "13",
+            "14",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "14",
+            "15",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "15",
+            "16",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "17",
+            {
+                "intent": "User wants to verify candidate's qualifications",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "17",
+            "18",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "18",
+            "19",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "19",
+            "20",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "20",
+            "21",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "22",
+            {
+                "intent": "User wants to assess candidate's fit for the role",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "22",
+            "23",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "23",
+            "24",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "24",
+            "25",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "25",
+            "26",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "27",
+            {
+                "intent": "User wants to score candidate responses",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "28",
+            {
+                "intent": "User wants to record candidate responses",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "28",
+            "29",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "29",
+            "30",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "30",
+            "31",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "31",
+            "32",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "32",
+            "33",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ]
+    ],
+    "role": "Interviewer",
+    "user_objective": "The interviewer interviews candidates for whatever role they have applied for. It assesses the candidate's personality, skills, qualifications and fit for the role. It scores the candidate based on the strength and relevance of answers and saves their response.",
+    "builder_objective": "The interviewer provides feedback to the company NOT the candidate on how well the user performed during the interview.",
+    "domain": "Human Resources (HR)",
+    "intro": "Recruiting is a tedius process and several candidates apply for several roles. The Interview, helps companies by removing the burden of interviewing several candidates by automating the process, ensuring that HR personell can focus their energy on other aspects of the recruitment process. It assesses the candidate's personality, skills, qualifications and fit for the role.",
+    "task_docs": [
+        {
+            "source": "",
+            "num": 20
+        }
+    ],
+    "tasks": [],
+    "workers": [
+        {
+            "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+            "name": "RoleQuestionWorker",
+            "path": "role_question_worker.py"
+        },
+        {
+            "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+            "name": "AnswerReviewWorker",
+            "path": "answer_review_worker.py"
+        },
+        {
+            "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+            "name": "MessageWorker",
+            "path": "message_worker.py"
+        },
+        {
+            "id": "b06c2b58-12c5-41fe-9838-e93b530e42e8",
+            "name": "DefaultWorker",
+            "path": "default_worker.py"
+        }
+    ],
+    "tools": [],
+    "nluapi": "",
+    "slotfillapi": ""
+}

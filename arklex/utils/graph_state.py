@@ -57,7 +57,29 @@ class StatusEnum(Enum):
     STAY = "stay"
 
 
+# class Score(BaseModel):
+    # score: int
+
+
 class MessageState(TypedDict):
+    # Candidate email
+    candidate_id: str
+
+    # Role candidate applied for
+    applied_role: str
+    
+    # personal questions
+    personal_asked: int
+
+    # number of behavioural questions asked
+    behavioural_count: int
+
+    # number of technical questions asked
+    technical_count: int
+
+    # score of the candidate
+    score: int
+
     # system configuration
     sys_instruct: str
     # bot configuration

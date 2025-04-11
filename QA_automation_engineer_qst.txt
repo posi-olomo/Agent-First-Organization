@@ -1,0 +1,13 @@
+INSERT INTO question_bank (role, Category, question_text)
+VALUES
+    ('QA Automation Engineer', 'technical', 'How do you handle test data in automated testing?'),
+    ('QA Automation Engineer', 'technical', 'What is the Page Object Model and why is it useful?'),
+    ('QA Automation Engineer', 'technical', 'What strategies do you use for regression testing?'),
+    ('QA Automation Engineer', 'technical', 'What are the differences between unit, integration, and end-to-end testing?'),
+    ('QA Automation Engineer', 'technical', 'Describe your experience with Selenium or Cypress.'),
+    ('QA Automation Engineer', 'technical', 'What are the key components of a good test case?'),
+    ('QA Automation Engineer', 'technical', 'Describe the difference between black-box and white-box testing.'),
+    ('QA Automation Engineer', 'technical', 'How do you integrate automated testing into CI/CD pipelines?'),
+    ('QA Automation Engineer', 'technical', 'How do you manage flaky tests in a test suite?'),
+    ('QA Automation Engineer', 'technical', 'How do you test an application with dynamic elements?')
+;

@@ -1,0 +1,21 @@
+[
+    {
+        "task_name": "Conduct skills assessment interview",
+        "steps": [
+            "Start the interview by introducing yourself and explaining how the interview process is going to progress.",
+            "Initiate the interview by asking personal questions to establish rapport and understand the candidate's background using RoleQuestionWorker.",
+            "Transition to behavioral questions to assess the candidate's past experiences and actions in various situations using RoleQuestionWorker.",
+            "Progress to technical questions that are specific to the role to evaluate the candidate's skills and expertise using RoleQuestionWorker.",
+            "For each response from the candidate, ask follow-up questions if necessary to clarify or expand on the candidate's responses.",
+            "For each response from the candidate, use AnswerReviewWorker to evaluate the answer's clarity, relevance, structure, and completeness.",
+            "Calculate the overall score for the candidate based on the strength and relevance of their responses across all question categories.",
+            "Conclude the interview session by delivering a closing message with information on next steps using MessageWorker."
+        ]
+    },
+    {
+        "task_name": "Save interview responses and scores for future reference",
+        "steps": [
+            "Save interview responses and scores for future reference"
+        ]
+    }
+]

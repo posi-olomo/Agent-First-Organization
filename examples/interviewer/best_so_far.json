@@ -1,0 +1,65 @@
+[
+    {
+        "task_name": "Conduct personality assessment",
+        "steps": [
+            "Use RoleQuestionWorker to ask the candidate personal questions to assess their personality traits.",
+            "Use MessageWorker to deliver the question to the candidate.",
+            "Receive and record the candidate's response using DefaultWorker.",
+            "Use AnswerReviewWorker to review the candidate's response, providing feedback on clarity, relevance, structure, and completeness.",
+            "Use MessageWorker to deliver the feedback to the candidate.",
+            "Use RoleQuestionWorker to ask the candidate behavior-based questions to further assess their personality traits.",
+            "Use MessageWorker to deliver the behavior question to the candidate.",
+            "Receive and record the candidate's behavior-based response using DefaultWorker.",
+            "Use AnswerReviewWorker to review the behavior-based response, and provide feedback.",
+            "Use MessageWorker to deliver the behavior response feedback to the candidate."
+        ]
+    },
+    {
+        "task_name": "Perform skill evaluation",
+        "steps": [
+            "Use the RoleQuestionWorker to ask the candidate personal questions to understand their background and motivations. These questions set the context for the evaluation.",
+            "Transition to behavior-based questions with the RoleQuestionWorker to assess how the candidate handles various situations and their interpersonal skills.",
+            "Use the RoleQuestionWorker to ask technical questions specific to the role, evaluating the hard skills and problem-solving abilities of the candidate.",
+            "Review the candidate's answers using the AnswerReviewWorker to provide feedback on clarity, relevance, structure, and completeness.",
+            "Score the candidate based on the strength and relevance of their answers. Save the responses and scores for future reference.",
+            "Use the MessageWorker to thank the candidate for their time and inform them of the next steps in the interview process."
+        ]
+    },
+    {
+        "task_name": "Verify qualifications",
+        "steps": [
+            "Initiate the interview by prompting the candidate for their personal background using RoleQuestionWorker.",
+            "Ask behavior-based questions tailored to the role using RoleQuestionWorker.",
+            "Proceed with technical questions relevant to the role using RoleQuestionWorker.",
+            "Use AnswerReviewWorker to review the candidate's responses for clarity, relevance, structure, and completeness.",
+            "Provide feedback on the candidate's responses using MessageWorker based on the review from AnswerReviewWorker, and save the candidate's responses for record-keeping."
+        ]
+    },
+    {
+        "task_name": "Assess role fit",
+        "steps": [
+            "Use RoleQuestionWorker to ask the candidate personal background questions to assess their personality and initial role fit.",
+            "Use RoleQuestionWorker to ask behavior-based questions to evaluate the candidate's past experiences and behavior in work-related situations.",
+            "Use RoleQuestionWorker to ask technical questions specifically related to the role to determine the candidate's technical competence.",
+            "Use AnswerReviewWorker to review each of the candidate's responses for clarity, relevance, structure, and completeness, and provide constructive feedback.",
+            "Use MessageWorker to communicate the feedback to the candidate and inform them about the next steps in the interview process."
+        ]
+    },
+    {
+        "task_name": "Score responses",
+        "steps": [
+            "Score responses"
+        ]
+    },
+    {
+        "task_name": "Record responses",
+        "steps": [
+            "Start the interview by using the RoleQuestionWorker to ask personal questions to the candidate to understand their background and motivations.",
+            "Continue the interview with behavioural questions using the RoleQuestionWorker to assess the candidate's past experiences and problem-solving abilities.",
+            "Proceed with technical questions using the RoleQuestionWorker, focusing on evaluating the candidate's technical skills relevant to the role.",
+            "Record the candidate's responses after each question using the DefaultWorker, ensuring all responses are documented accurately.",
+            "Review the candidate's responses using the AnswerReviewWorker to provide feedback on the clarity, relevance, structure, and completeness of their answers.",
+            "Deliver the feedback to the candidate using the MessageWorker, reinforcing their strengths and suggesting improvements."
+        ]
+    }
+]

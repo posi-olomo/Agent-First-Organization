@@ -1,0 +1,1111 @@
+{
+    "nodes": [
+        [
+            "0",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Hello and welcome! I am your virtual Interviewer. Are you ready to start the interview process? I can ask you questions about your personal background, behavioral skills, or technical expertise. Let me know which area you'd like to begin with!",
+                    "task": "start message",
+                    "directed": false
+                },
+                "limit": 1,
+                "type": "start"
+            }
+        ],
+        [
+            "1",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Welcome! Could you please provide your email and the role you applied for?",
+                    "task": "Welcome the candidate and ask for their email to identify them and then the role they applied for.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "2",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Can you tell me about yourself and your interests?",
+                    "task": "Ask the candidate 3 personal questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "3",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Please provide your email and the role you are applying for.",
+                    "task": "Use the MessageWorker to ask the candidate for their email and the role they are applying for.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "4",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the RoleQuestionWorker to retrieve and ask the first set of role-based interview questions, starting with personal questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "5",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here's your first question: [Personal Question]. Please provide your response.",
+                    "task": "Use the MessageWorker to present the personal question to the candidate and record their response.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "6",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the AnswerReviewWorker to evaluate the candidate's response to the personal question and assign a score.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "7",
+            {
+                "resource": {
+                    "id": "55568f1d-160b-11f0-b786-e2b9fcc27dba",
+                    "name": "database-build_database-build_database"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Store the candidate's ID (email), role, personal question, their response, and the score in the SQLite database.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "8",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the RoleQuestionWorker to retrieve and ask the next set of role-based interview questions, which are behavioural questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "9",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here's your next question: [Behavioural Question]. Please provide your response.",
+                    "task": "Use the MessageWorker to present the behavioural question to the candidate and record their response.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "10",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the AnswerReviewWorker to evaluate the candidate's response to the behavioural question and assign a score.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "11",
+            {
+                "resource": {
+                    "id": "55568f1d-160b-11f0-b786-e2b9fcc27dba",
+                    "name": "database-build_database-build_database"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Store the candidate's ID (email), role, behavioural question, their response, and the score in the SQLite database.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "12",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the RoleQuestionWorker to retrieve and ask the final set of role-based interview questions, which are technical questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "13",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here's your final question: [Technical Question]. Please provide your response.",
+                    "task": "Use the MessageWorker to present the technical question to the candidate and record their response.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "14",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the AnswerReviewWorker to evaluate the candidate's response to the technical question and assign a score.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "15",
+            {
+                "resource": {
+                    "id": "55568f1d-160b-11f0-b786-e2b9fcc27dba",
+                    "name": "database-build_database-build_database"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Store the candidate's ID (email), role, technical question, their response, and the score in the SQLite database.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "16",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Thank you for your responses. The interview process is now complete. We will be in touch with the next steps soon.",
+                    "task": "Use the MessageWorker to inform the candidate that the interview process is complete and provide any next steps or closing remarks.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "17",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Can you describe a time when you faced a challenging situation at work and how you dealt with it?",
+                    "task": "Ask the candidate 3 behavioural questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "18",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Hello! Could you please provide your email and the role you are applying for?",
+                    "task": "Use MessageWorker to greet the candidate and ask for their email and the role they are applying for.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "19",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Thank you! Let's start with a few personal questions related to the role you are applying for.",
+                    "task": "Use RoleQuestionWorker to retrieve the candidate's email and role, and to start asking role-based personal questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "20",
+            {
+                "resource": {
+                    "id": "55568f1d-160b-11f0-b786-e2b9fcc27dba",
+                    "name": "database-build_database-build_database"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Store the candidate's id (derived from email) and role in the SQLite database.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "21",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Now, let's move on to some behavioural questions.",
+                    "task": "Continue using RoleQuestionWorker to ask behavioural questions, storing each question and response in the database.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "22",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Next, I will ask you some technical questions related to the role.",
+                    "task": "Proceed to technical questions with RoleQuestionWorker, saving each question and response in the database.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "23",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use AnswerReviewWorker to evaluate each response for personal, behavioural, and technical questions, and store the scores in the database.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "24",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Thank you for your time! Your responses have been recorded and we will get back to you soon.",
+                    "task": "Use MessageWorker to thank the candidate for their time and inform them that their responses have been recorded.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "25",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Can you provide your email and the role you applied for so we can proceed with the technical questions?",
+                    "task": "Ask the candidate 6 technical questions based on the role they applied for.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "26",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Could you please provide your email and the role you are applying for?",
+                    "task": "Use the RoleQuestionWorker to ask the candidate for their email and the role they are applying for.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "27",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Let's start with some personal interview questions tailored to the role you are applying for.",
+                    "task": "Based on the role provided, use the RoleQuestionWorker to start asking personal interview questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "28",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the AnswerReviewWorker to review the candidate's response to the personal questions and score them based on accuracy, clarity, relevance, structure, and completeness.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "29",
+            {
+                "resource": {
+                    "id": "55568f1d-160b-11f0-b786-e2b9fcc27dba",
+                    "name": "database-build_database-build_database"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Store the candidate's ID, role applied, personal question asked, response, and score in the sqlite database.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "30",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Now, let's move on to some behavioural interview questions.",
+                    "task": "Use the RoleQuestionWorker to proceed with asking the candidate behavioural interview questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "31",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the AnswerReviewWorker to review and score the candidate's responses to the behavioural questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "32",
+            {
+                "resource": {
+                    "id": "55568f1d-160b-11f0-b786-e2b9fcc27dba",
+                    "name": "database-build_database-build_database"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Store the behavioural question, response, and score in the sqlite database.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "33",
+            {
+                "resource": {
+                    "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+                    "name": "RoleQuestionWorker"
+                },
+                "attribute": {
+                    "value": "Finally, let's proceed with the technical interview questions.",
+                    "task": "Use the RoleQuestionWorker to proceed with asking the candidate technical interview questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "34",
+            {
+                "resource": {
+                    "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+                    "name": "AnswerReviewWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the AnswerReviewWorker to review and score the candidate's responses to the technical questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "35",
+            {
+                "resource": {
+                    "id": "55568f1d-160b-11f0-b786-e2b9fcc27dba",
+                    "name": "database-build_database-build_database"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Store the technical question, response, and score in the sqlite database.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "36",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Thank you for your time today. We will review your interview and get back to you with the results soon.",
+                    "task": "Thank the candidate for their time and let them know we will get back to them on the result of this interview.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "37",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Thank you for your time. If you have any more questions or need further assistance, feel free to reach out. Have a great day!",
+                    "task": "End the conversation.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ]
+    ],
+    "edges": [
+        [
+            "0",
+            "1",
+            {
+                "intent": "Welcome the candidate and ask for their email to identify them and then the role they applied for.",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "2",
+            {
+                "intent": "Ask the candidate 3 personal questions.",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "3",
+            {
+                "intent": "Store the candidate's id, role applied, question asked, their response and their score  in an sqlite database.",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "3",
+            "4",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "4",
+            "5",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "5",
+            "6",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "6",
+            "7",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "7",
+            "8",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "8",
+            "9",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "9",
+            "10",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "10",
+            "11",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "11",
+            "12",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "12",
+            "13",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "13",
+            "14",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "14",
+            "15",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "15",
+            "16",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "17",
+            {
+                "intent": "Ask the candidate 3 behavioural questions.",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "18",
+            {
+                "intent": "Store the candidate's id, role applied, question asked, their response and their score  in an sqlite database.",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "18",
+            "19",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "19",
+            "20",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "20",
+            "21",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "21",
+            "22",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "22",
+            "23",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "23",
+            "24",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "25",
+            {
+                "intent": "Ask the candidate 6 technical questions based on the role they applied for.",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "26",
+            {
+                "intent": "Store the candidate's id, role applied, question asked, their response and their score in an sqlite database.",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "26",
+            "27",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "27",
+            "28",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "28",
+            "29",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "29",
+            "30",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "30",
+            "31",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "31",
+            "32",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "32",
+            "33",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "33",
+            "34",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "34",
+            "35",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "36",
+            {
+                "intent": "Thank the candiate for their time and let them know we will get back to them on the result of this interview.",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "37",
+            {
+                "intent": "End the conversation.",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ]
+    ],
+    "role": "Interviewer",
+    "user_objective": "The interviewer helps companies to interview candidates. It draws from a database of interview questions asking questions within 3 domains: personal, behavioural and technical questions.",
+    "builder_objective": "The interviewer scores the candidate's responses to the questions based on accuracy, clarity, relevance, structure and completeness. It saves their id, role applied, question answered, response and score.",
+    "domain": "Human Resources (HR)",
+    "intro": "Recruiting is a tedius process and several candidates apply for several roles. The Interview, helps companies by removing the burden of interviewing several candidates by automating the process, ensuring that HR personell can focus their energy on other aspects of the recruitment process. It assesses the candidate's personality, skills, qualifications and fit for the role.",
+    "task_docs": [
+        {
+            "source": "",
+            "num": 20
+        }
+    ],
+    "tasks": [
+        "Welcome the candidate and ask for their email to identify them and then the role they applied for.",
+        "Ask the candidate 3 personal questions.",
+        "Store the candidate's id, role applied, question asked, their response and their score  in an sqlite database.",
+        "Ask the candidate 3 behavioural questions.",
+        "Store the candidate's id, role applied, question asked, their response and their score  in an sqlite database.",
+        "Ask the candidate 6 technical questions based on the role they applied for.",
+        "Store the candidate's id, role applied, question asked, their response and their score in an sqlite database.",
+        "Thank the candiate for their time and let them know we will get back to them on the result of this interview.",
+        "End the conversation."
+    ],
+    "workers": [
+        {
+            "id": "7535f03b-05c9-11f0-8666-ba5643cc72e9",
+            "name": "RoleQuestionWorker",
+            "path": "role_question_worker.py"
+        },
+        {
+            "id": "43690404-1307-11f0-8007-9843fa7b8b68",
+            "name": "AnswerReviewWorker",
+            "path": "answer_review_worker.py"
+        },
+        {
+            "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+            "name": "MessageWorker",
+            "path": "message_worker.py"
+        },
+        {
+            "id": "b06c2b58-12c5-41fe-9838-e93b530e42e8",
+            "name": "DefaultWorker",
+            "path": "default_worker.py"
+        }
+    ],
+    "tools": [
+        {
+            "id": "55568f1d-160b-11f0-b786-e2b9fcc27dba",
+            "name": "build_database",
+            "path": "database\\build_database.py"
+        }
+    ],
+    "nluapi": "",
+    "slotfillapi": ""
+}

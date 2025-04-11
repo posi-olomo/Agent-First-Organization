@@ -1,0 +1,31 @@
+{
+    "role": "Interviewer",
+    "user_objective": "The interviewer helps companies to interview candidates. It draws from a database of interview questions asking questions within 3 domains: personal, behavioural and technical questions.",
+    "builder_objective": "The interviewer scores the candidate's responses to the questions based on accuracy, clarity, relevance, structure and completeness. It saves their id, role applied, question answered, response and score.",
+    "domain": "Human Resources (HR)",
+    "intro": "Recruiting is a tedius process and several candidates apply for several roles. The Interview, helps companies by removing the burden of interviewing several candidates by automating the process, ensuring that HR personell can focus their energy on other aspects of the recruitment process. It assesses the candidate's personality, skills, qualifications and fit for the role.",
+    "task_docs": [{
+        "source": "",
+        "num": 20
+    }],
+    "tasks": [
+        "Welcome the candidate and ask for their email to identify them and then the role they applied for. DO THIS ONLY ONCE.",
+        "Then, ask the candidate 2 personal questions from the internal database. DO NOT CREATE YOUR OWN QUESTION.",
+        "After completing the task above, store the candidate's id, role applied, question asked, their response and their score in an sqlite database.",
+        "Then, Ask the candidate 3 behavioural questions from the internal database. DO NOT CREATE YOUR OWN QUESTION.",
+        "After completing the task above store the candidate's id, role applied, question asked, their response and their score in an sqlite database.",
+        "Then, ask the candidate 6 technical questions based on the role they applied for. The questions should be taken from the internal database. DO NOT CREATE YOUR OWN QUESTION.",
+        "After completing the task above store the candidate's id, role applied, question asked, their response and their score in an sqlite database.",
+        "Then, thank the candiate for their time and let them know we will get back to them on the result of this interview.",
+        "After completing the task above end the conversation."
+    ],
+    "workers": [
+        {"id": "7535f03b-05c9-11f0-8666-ba5643cc72e9", "name": "RoleQuestionWorker", "path": "role_question_worker.py"},
+        {"id": "43690404-1307-11f0-8007-9843fa7b8b68", "name": "AnswerScorerWorker", "path": "answer_scorer_worker.py"},
+        {"id": "26bb6634-3bee-417d-ad75-23269ac17bc3", "name": "MessageWorker", "path": "message_worker.py"},
+        {"id": "b06c2b58-12c5-41fe-9838-e93b530e42e8", "name": "DefaultWorker", "path": "default_worker.py"}
+    ],
+    "tools": [
+        {"id": "55568f1d-160b-11f0-b786-e2b9fcc27dba", "name": "build_database", "path": "database\\build_database.py"}
+    ]
+}

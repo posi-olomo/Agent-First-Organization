@@ -1,0 +1,4 @@
+import sqlite3
+
+
+conn = sqlite3.connect("my_database.db")  # Make sure this file path exists or is allowed to be created

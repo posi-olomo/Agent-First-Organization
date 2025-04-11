@@ -1,0 +1,16 @@
+INSERT INTO question_bank (role, Category, question_text)
+VALUES
+    ('Cloud Engineer', 'technical', 'Compare AWS CloudFormation, Terraform, and Azure Resource Manager. When would you use each?'),
+    ('Cloud Engineer', 'technical', 'How do you configure auto-scaling groups in Azure or GCP?'),
+    ('Cloud Engineer', 'technical', 'What is the shared responsibility model in cloud computing?'),
+    ('Cloud Engineer', 'technical', 'Describe a successful cloud migration project you led.'),
+    ('Cloud Engineer', 'technical', 'What are common strategies for cloud cost optimization?'),
+    ('Cloud Engineer', 'technical', 'How do you troubleshoot latency issues in cloud services?'),
+    ('Cloud Engineer', 'technical', 'Explain how load balancing works in cloud platforms.'),
+    ('Cloud Engineer', 'technical', 'What is Infrastructure as Code (IaC) and what tools have you used?'),
+    ('Cloud Engineer', 'technical', 'How do you design a multi-region architecture on AWS?'),
+    ('Cloud Engineer', 'technical', 'Describe the differences between IaaS, PaaS, and SaaS.'),
+    ('Cloud Engineer', 'technical', 'Compare AWS S3, Azure Blob Storage, and GCP Cloud Storage.'),
+    ('Cloud Engineer', 'technical', 'How do you secure cloud resources using identity management?'),
+    ('Cloud Engineer', 'technical', 'What are best practices for logging and monitoring in the cloud?')
+;
